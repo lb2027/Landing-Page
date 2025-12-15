@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINUS CARE - Solusi Kesehatan Kampus</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>BINUS<span>CARE</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#emergency">Darurat</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-text fade-in-up">
+                <h2>Solusi Kesehatan Kampus <br>Dalam Satu Genggaman</h2>
+                <p>Mendukung <strong>Good Health and Well-Being</strong>, Akses layanan kesehatan kampus dalam satu sentuhan. Dari konsultasi dokter, cek stok obat, hingga tombol darurat 24/7. Kesehatanmu merupakan prioritas kami.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fab fa-google-play"></i> Play Store
+                    </a>
+                    
+                    <a href="#" class="btn btn-secondary" id="qrBtn">
+                        <i class="fas fa-qrcode"></i> Scan QR Code
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image fade-in-up">
+                <div class="phone-mockup phone-left">
+                    <img src="hp-emergency.png" alt="Tampilan Emergency Button">
+                </div>
+                
+                <div class="phone-mockup phone-center">
+                    <img src="hp-main.png" alt="Tampilan Dashboard Utama">
+                </div>
+                
+                <div class="phone-mockup phone-right">
+                    <img src="hp-konsul.png" alt="Tampilan Konsultasi Chat">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fitur Unggulan</h2>
+                <p>Efisiensi layanan UKS untuk kenyamanan mahasiswa dan staff.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card urgent">
+                    <div class="icon"><i class="fas fa-triangle-exclamation"></i></div>
+                    <h3>Pelaporan Urgent</h3>
+                    <p>Panic Button yang langsung terhubung ke petugas UKS dan Satpam untuk situasi darurat.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-user-doctor"></i></div>
+                    <h3>Konsultasi Online</h3>
+                    <p>Chat langsung dengan petugas UKS atau booking jadwal konsultasi offline tanpa antri.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-pills"></i></div>
+                    <h3>Cek Stok Obat</h3>
+                    <p>Lihat ketersediaan obat di UKS secara realtime dan info alternatif jika stok habis.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-bell"></i></div>
+                    <h3>Notifikasi Kesehatan</h3>
+                    <p>Dapatkan peringatan dini wabah (seperti DBD) di sekitar area kampus.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-book-medical"></i></div>
+                    <h3>Edukasi Kesehatan</h3>
+                    <p>Artikel, video, dan poster digital tentang kesehatan mental, pola makan, dan olahraga.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-file-medical"></i></div>
+                    <h3>Pencatatan Digital</h3>
+                    <p>Sistem rekam medis digital yang efisien untuk pelayanan yang lebih cepat dan akurat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emergency" class="emergency-banner">
+        <div class="container emergency-content">
+            <div class="emergency-text">
+                <h2><i class="fas fa-truck-medical"></i> Keadaan Darurat di Kampus?</h2>
+                <p>Jangan panik. Buka aplikasi <strong>BINUS CARE</strong> dan tekan tombol merah. Bantuan medis dan keamanan akan segera datang ke lokasi Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2>BINUS<span>CARE</span></h2>
+                <p>Official Campus Health Application.</p>
+            </div>
+            <div class="footer-credit">
+                <p>&copy; 2025 Binus Care Team.</p>
+                <p class="anggota">Anggota 1 : <strong>Arian Febrian</strong></p>
+                <p class="anggota">Anggota 2 : <strong>Muhammad Rayhan Sahzada</strong></p>
+                <p class="anggota">Anggota 3 : <strong>Dimas Ardiansyah Putra Y</strong></p>
+                <p class="anggota">Anggota 4 : <strong>Muhammad Althof Misbahhudin</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="qrModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Scan untuk Download</h3>
+                <p>Arahkan kamera HP Anda ke QR Code ini untuk mengunduh aplikasi via Google Drive.</p>
+                
+                <img src="qr-code.png" alt="QR Code Download" class="qr-img">
+                
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

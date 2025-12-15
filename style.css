@@ -1,0 +1,517 @@
+:root {
+    /* Palet Warna Aplikasi */
+    --primary-color: #0099FF;
+    --primary-dark: #007bb5;
+    --accent-color: #FF9900;
+    --urgent-red: #D32F2F;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8fbff;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 550px;
+    z-index: 10;
+    padding-right: 2rem;
+}
+
+.hero-text h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #222;
+    font-weight: 800;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Tombol Download */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn i {
+    margin-right: 12px;
+    font-size: 1.4rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 10px 25px -5px rgba(0, 153, 255, 0.5);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(0, 153, 255, 0.6);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+.btn-secondary:hover {
+    border-color: #333;
+    transform: translateY(-5px);
+}
+
+/* --- HERO IMAGE (3 HP REAL - VERSI JUMBO) --- */
+.hero-image {
+    flex: 1.5; /* Memberi ruang lebih luas untuk gambar */
+    position: relative;
+    height: 800px; /* Area dipertinggi agar HP besar muat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* STYLING MOCKUP HP (BERSIH TANPA BINGKAI CSS) */
+.phone-mockup {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* HAPUS SEMUA BORDER & RADIUS CSS */
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none; 
+    overflow: visible; 
+}
+
+.phone-mockup img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+    object-fit: unset;
+    transform: none;
+
+    /* Bayangan langsung pada bentuk HP PNG */
+    filter: drop-shadow(0 25px 40px rgba(0,0,0,0.25));
+}
+
+/* Posisi & Ukuran HP (JUMBO SIZE) */
+
+/* 1. HP Tengah (Main Page) */
+.phone-center {
+    z-index: 10;
+    width: 1100px; /* Ukuran DIPERBESAR JAUH */
+    transform: none;
+}
+
+/* 2. HP Kiri (Emergency) */
+.phone-left {
+    z-index: 5;
+    width: 900px; /* Ukuran DIPERBESAR */
+    /* Jarak geser diperlebar ke 240px karena HP makin lebar */
+    transform: translateX(-240px) translateY(50px) rotate(-12deg);
+    opacity: 0.95;
+}
+
+/* 3. HP Kanan (Konsultasi) */
+.phone-right {
+    z-index: 5;
+    width: 700px; /* Ukuran DIPERBESAR */
+    /* Jarak geser diperlebar ke 240px */
+    transform: translateX(240px) translateY(50px) rotate(12deg);
+    opacity: 0.95;
+}
+
+/* Efek Hover (Menyebar Lebih Jauh) */
+.hero-image:hover .phone-left {
+    transform: translateX(-280px) translateY(40px) rotate(-15deg);
+}
+.hero-image:hover .phone-right {
+    transform: translateX(280px) translateY(40px) rotate(15deg);
+}
+.hero-image:hover .phone-center {
+    transform: translateY(-20px) scale(1.02);
+}
+
+/* --- FEATURES SECTION --- */
+.features {
+    padding: 8rem 0;
+    background: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.section-title p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.feature-card .icon {
+    width: 70px;
+    height: 70px;
+    background: #e0f2fe;
+    color: var(--primary-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- KARTU KHUSUS: URGENT (SOFT ALERT) --- */
+.feature-card.urgent {
+    background: #fff8f8; /* Pink sangat muda */
+    border: 2px solid var(--urgent-red);
+}
+
+.feature-card.urgent .icon {
+    background: #fde8e8; /* Pink muda */
+    color: var(--urgent-red);
+}
+
+.feature-card.urgent:hover {
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(211, 47, 47, 0.15);
+}
+
+/* --- EMERGENCY BANNER --- */
+.emergency-banner {
+    background: linear-gradient(135deg, var(--urgent-red), #b71c1c);
+    padding: 5rem 0;
+    color: var(--white);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.emergency-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.emergency-text i {
+    margin-right: 15px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #111;
+    color: #888;
+    padding: 5rem 0 3rem;
+    text-align: center;
+}
+
+.footer-logo h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.footer-credit {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+}
+
+.footer-credit strong {
+    color: #fff;
+}
+
+/* --- ANIMASI --- */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIF (HP & TABLET) --- */
+@media (max-width: 1200px) {
+    .hero-image { height: 700px; }
+    .phone-center { width: 320px; }
+    .phone-left { width: 290px; transform: translateX(-200px) translateY(40px) rotate(-10deg); }
+    .phone-right { width: 290px; transform: translateX(200px) translateY(40px) rotate(10deg); }
+}
+
+@media (max-width: 968px) {
+    .hero-text h2 { font-size: 2.8rem; }
+    /* Di laptop kecil, teks di atas, gambar di bawah */
+    .hero-container { flex-direction: column; text-align: center; }
+    .hero-text { padding-right: 0; margin-bottom: 4rem; }
+    .cta-buttons { justify-content: center; }
+
+    .hero-image { height: 600px; width: 100%; }
+    .phone-center { width: 280px; }
+    .phone-left { width: 250px; transform: translateX(-160px) translateY(40px) rotate(-8deg); }
+    .phone-right { width: 250px; transform: translateX(160px) translateY(40px) rotate(8deg); }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    
+    .hero { padding-top: 3rem; }
+    
+    /* Di HP, tampilkan 1 HP saja (Center) agar tidak sempit */
+    .hero-image { height: 550px; }
+    .phone-left, .phone-right { display: none; }
+    .phone-center { 
+        width: 300px; 
+        transform: none; /* Tegak lurus */
+    }
+    .hero-image:hover .phone-center { transform: translateY(-10px); }
+    
+    .features-grid { grid-template-columns: 1fr; }
+}
+
+/* --- MODAL POPUP (QR CODE) --- */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed; 
+    z-index: 2000; /* Paling atas di atas segalanya */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.6); /* Background hitam transparan */
+    backdrop-filter: blur(5px); /* Efek blur di background */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Class aktif untuk memunculkan modal */
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px; /* Lebar maksimal popup */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+/* Tombol Close (X) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--urgent-red);
+}
+
+/* Styling konten dalam modal */
+.modal-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.modal-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.qr-img {
+    width: 200px;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.btn-text {
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+}
